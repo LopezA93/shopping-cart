@@ -2,6 +2,8 @@
 
 Esta aplicación cumple con los requisitos solicitados para listar productos, añadirlos al carrito de compras y manejar la funcionalidad de favoritos.
 
+## Para probar la app en local se debe cambiar la constante de isDev del archivo services/products.ts a true, y levantar el servidor de la api manera local.
+
 ---
 
 ## **Características Implementadas**
