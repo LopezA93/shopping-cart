@@ -1,0 +1,106 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  .favoriteButton {
+    outline: none;
+    background: none;
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    &:hover {
+      color: #ffaa00;
+    }
+  }
+  img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .productDetail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    gap: 5px;
+    height: 150px;
+    overflow-y: auto;
+    h3 {
+      margin: 8px 0;
+      font-size: 16px;
+      text-align: left;
+    }
+
+    p {
+      font-size: 12px;
+      color: #555;
+      text-align: left;
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+
+      span {
+        font-size: 14px;
+
+        &.price {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .bottomBox {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5rem;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      margin-left: 10px;
+      font-weight: 600;
+      &.stock {
+        color: green;
+
+        &.out-of-stock {
+          color: red;
+        }
+      }
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-right: 10px;
+      margin-bottom: 5px;
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+}

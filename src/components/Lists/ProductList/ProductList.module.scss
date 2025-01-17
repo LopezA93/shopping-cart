@@ -1,0 +1,80 @@
+.container {
+  height: 100vh;
+  box-sizing: border-box;
+  .titleContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+
+    h1 {
+      color: #fff;
+    }
+
+    .linkCart {
+      font-size: 1.5rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    .counter {
+      color: white;
+      border-radius: 50%;
+      padding: 2px 6px;
+      font-size: 12px;
+      margin-left: 8px;
+    }
+  }
+
+  .filterContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0;
+    gap: 16px;
+
+    .filterButton {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      outline: none;
+      cursor: pointer;
+      padding: 4px 8px;
+      position: relative;
+    }
+
+    .active {
+      color: #4caf50;
+    }
+  }
+
+  .productGrid {
+    display: grid;
+    gap: 36px;
+    padding: 16px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+.messageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  .errorMessage {
+    color: red;
+  }
+  .loadingMessage {
+    color: white;
+  }
+}
